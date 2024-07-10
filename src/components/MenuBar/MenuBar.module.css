@@ -1,0 +1,63 @@
+.menuBar {
+    width: 100%;
+    background-color: #3b3b3e;
+}
+
+.menuBarItems {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    list-style: none;
+    padding: 8px 16px;
+    margin: 0;
+}
+
+.menuBarItem {
+    position: relative;
+    padding: 2px 0;
+}
+
+.menuBarItem a {
+    color: #cfd0d2;
+    text-decoration: none;
+}
+
+.activeBar {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: -8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.activeMenuBarItem a {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.activeMenuBarItem .activeBar {
+    background-color: #ffa50b;
+}
+
+@media (max-width: 768px) {
+    .menuBarItems {
+        padding: 6px;
+        font-style: 0.75rem;
+        gap: .5rem;
+    }
+
+    .menuBarItem {
+        padding: 8px;
+    }
+
+    .activeBar{
+        width: 85%;
+        bottom: -6px;
+    }
+}
